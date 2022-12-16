@@ -1,4 +1,23 @@
-html, body {
+* {
     margin: 0;
     padding: 0;
+    background-color: rgb(33, 35, 41);
+    color:white
+}
+.nav-items{
+    list-style: none;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:20%;
+    margin-right: 5%;
+    font-size: 2rem;
+}
+.header-navbar{
+    display: flex;
+    justify-content:space-between ;
+    padding: 20px;
+}
+.nav-img{
+    width: 100px;
 }
