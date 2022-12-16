@@ -117,27 +117,88 @@ Part 2:
 
  */
 
-function CustomComponent() {
+// function CustomComponent() {
+//   return (
+//     <div>
+//       <header>
+//         <nav>
+//           <img
+//             width="60px"
+//             src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+//             alt="known"
+//           ></img>
+//         </nav>
+//       </header>
+//       <h1>I'm excited to learn React"</h1>
+//       <ol>
+//         <li>to get a lot of money</li>
+//         <li>to ???</li>
+//         <li>!!!!!!!</li>
+//       </ol>
+//       <footer>© 2022 hamad development. All rights reserved.</footer>
+//     </div>
+//   );
+// }
+
+// ReactDOM.render(<CustomComponent />, document.getElementById("root"));
+
+//! Parent/Child Components
+/**
+Mini Challenge:
+Move the `header` element from Page into 
+its own component called "Header"
+*/
+
+// - Move the `footer` into its own component called "Footer"
+//   and render that component inside the Page component.
+// - Move the `h1` and `ol` together into another component
+//   called "MainContent" and render inside Page as well.
+
+// ReactDOM.render(<Page />, document.getElementById("root"))
+
+// answer
+function HeaderComponent() {
+  return (
+    <header>
+      <nav>
+        <img
+          width="60px"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+          alt="known"
+        ></img>
+      </nav>
+    </header>
+  );
+}
+function MainContent() {
+    return (
+      <div>
+        <h1>Reasons I'm excited to learn React</h1>
+        <ol>
+          <li>
+            It's a popular library, so I'll be able to fit in with the cool
+            kids!
+          </li>
+          <li>I'm more likely to get a job as a developer if I know React</li>
+        </ol>
+      </div>
+    );
+  }
+  function Footer(){
+    return(
+        <footer>
+        <small>© 2021 Hamad development. All rights reserved.</small>
+      </footer>
+    );
+  }
+function Page() {
   return (
     <div>
-      <header>
-        <nav>
-          <img
-            width="60px"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
-            alt="known"
-          ></img>
-        </nav>
-      </header>
-      <h1>I'm excited to learn React"</h1>
-      <ol>
-        <li>to get a lot of money</li>
-        <li>to ???</li>
-        <li>!!!!!!!</li>
-      </ol>
-      <footer>© 2022 hamad development. All rights reserved.</footer>
+      <HeaderComponent />
+        <MainContent/>    
+        <Footer/>
     </div>
   );
 }
 
-ReactDOM.render(<CustomComponent />, document.getElementById("root"));
+ReactDOM.render(<Page />, document.getElementById("root"));
