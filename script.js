@@ -157,47 +157,12 @@ its own component called "Header"
 // ReactDOM.render(<Page />, document.getElementById("root"))
 
 // answer
-function HeaderComponent() {
-  return (
-    <header >
-      <nav className="header-navbar">
-        <img
-          className="nav-img"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
-          alt="known"
-        ></img>
-      <ul className="nav-items">
-        <li>Pricing</li>
-        <li>About</li>
-        <li>Contact</li>
-      </ul>
-      </nav>
 
-    </header>
-  );
-}
-function MainContent() {
-    return (
-      <div>
-        <h1>Reasons I'm excited to learn React</h1>
-        <ol>
-          <li>
-            It's a popular library, so I'll be able to fit in with the cool
-            kids!
-          </li>
-          <li>I'm more likely to get a job as a developer if I know React</li>
-        </ol>
-      </div>
-    );
-  }
-  function Footer(){
-    return(
-        <footer>
-        <small>© 2021 Hamad development. All rights reserved.</small>
-      </footer>
-    );
-  }
-function Page() {
+
+import MainContent from "./MainContent";  
+import Footer from "./Footer";
+import HeaderComponent from "./HeaderComponent";
+function App() {
   return (
     <div>
       <HeaderComponent />
@@ -207,4 +172,4 @@ function Page() {
   );
 }
 
-ReactDOM.render(<Page />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
